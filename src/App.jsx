@@ -12,7 +12,7 @@ export default function App() {
     <>
       <Navbar />
 
-      <main className="pb-20 md:pb-0">
+      <main className="pb-24 md:pb-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking />} />
