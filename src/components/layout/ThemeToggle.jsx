@@ -23,11 +23,11 @@ export default function ThemeToggle() {
         justify-center
         rounded-full
         border
-        border-[var(--border-subtle)]
-        text-[var(--text-primary)]
+        border-(--border-subtle)
+        text-(--text-primary)
         transition-colors
         duration-300
-        hover:bg-[var(--bg-surface-hover)]
+        hover:bg-(--bg-surface-hover)
       "
     >
       {isDark ? (
