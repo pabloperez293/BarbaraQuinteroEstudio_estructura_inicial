@@ -21,7 +21,6 @@ export default function Navbar() {
           />
 
           <span className="hidden text-sm font-semibold tracking-wide lg:block">
-            Barbara Quintero
           </span>
         </Link>
 
