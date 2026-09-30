@@ -7,6 +7,7 @@ import Gallery from "../components/landing/Gallery";
 import About from "../components/landing/About";
 import ContactCTA from "../components/landing/ContactCTA";
 import Footer from "../components/layout/Footer";
+import FullLaminado from "../components/landing/Fulllaminado";
 
 export default function Home() {
   const { hash } = useLocation();
@@ -34,6 +35,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <ServicesPreview />
+      <FullLaminado />
       <Gallery />
       <About />
       <ContactCTA />
