@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -5,24 +6,27 @@ import heroBackground from "../../assets/images/brand/logo-barbara.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate min-h-[78svh] overflow-hidden md:min-h-[calc(100vh-81px)]">
       {/* Imagen de fondo */}
       <img
         src={heroBackground}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        loading="eager"
+        fetchPriority="high"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 -z-10 bg-black/70" />
 
       {/* Degradado inferior */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[var(--bg-main)] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-(--bg-main) to-transparent" />
 
       {/* Contenido */}
       <div className="mx-auto flex min-h-[78svh] max-w-7xl items-center px-4 py-20 sm:px-6 md:min-h-[calc(100vh-81px)] md:py-24">
         <div className="max-w-3xl">
+          {/* Subtítulo */}
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,6 +36,7 @@ export default function Hero() {
             Lash Artist & Beauty Studio
           </motion.p>
 
+          {/* Título */}
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,6 +50,7 @@ export default function Hero() {
             ESTUDIO
           </motion.h1>
 
+          {/* Frase */}
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,6 +60,7 @@ export default function Hero() {
             Lujo • Precisión • Elegancia
           </motion.p>
 
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,6 +78,10 @@ export default function Hero() {
                 transition-all duration-300
                 hover:-translate-y-0.5
                 hover:bg-(--accent-primary-hover)
+                focus-visible:outline-2
+                focus-visible:outline-offset-4
+                focus-visible:outline-(--accent-primary)
+                active:translate-y-0
               "
             >
               Reservar turno
@@ -81,3 +92,4 @@ export default function Hero() {
     </section>
   );
 }
+
