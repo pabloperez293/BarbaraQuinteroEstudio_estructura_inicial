@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+:root {
+  /* ========================================
+     DARK MODE — DEFAULT
+     ======================================== */
+
+  --bg-main: #0D0D0F;
+  --bg-surface: #161619;
+  --bg-surface-hover: #222226;
+
+  --accent-primary: #FF5A9E;
+  --accent-primary-hover: #E04889;
+  --accent-gold: #D4AF37;
+
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+
+  --border-subtle: #27272A;
+
+  /* ========================================
+     EFFECTS
+     ======================================== */
+
+  --shadow-elevation:
+    0 20px 40px -15px rgba(0, 0, 0, 0.7);
+
+  --shadow-accent:
+    0 0 25px -5px rgba(255, 90, 158, 0.35);
+
+  /* ========================================
+     LAYOUT
+     ======================================== */
+
+  --content-max-width: 1280px;
+  --content-narrow-width: 1024px;
+
+  /* ========================================
+     RADIUS
+     ======================================== */
+
+  --radius-card: 24px;
+  --radius-input: 12px;
+}
+
+html.light {
+  /* ========================================
+     LIGHT MODE
+     ======================================== */
+
+  --bg-main: #FAFAFA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-hover: #F4F4F5;
+
+  --accent-primary: #E11D48;
+  --accent-primary-hover: #BE123C;
+  --accent-gold: #B8860B;
+
+  --text-primary: #09090B;
+  --text-secondary: #71717A;
+
+  --border-subtle: #E4E4E7;
+
+  --shadow-elevation:
+    0 10px 30px -10px rgba(0, 0, 0, 0.08);
+
+  --shadow-accent:
+    0 0 25px -5px rgba(225, 29, 72, 0.20);
+}
+
+/* ========================================
+   GLOBAL
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-main);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background: var(--bg-main);
+  color: var(--text-primary);
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  transition:
+    background-color 300ms ease-out,
+    color 300ms ease-out;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+/* ========================================
+   FORM ELEMENTS
+   ======================================== */
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ========================================
+   INTERACTION
+   ======================================== */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ========================================
+   IMAGES
+   ======================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  No aplicamos brightness globalmente.
+  Algunas imágenes, como el logo, no deberían
+  oscurecerse automáticamente en dark mode.
+*/
+
+.image-dark-mode {
+  transition: filter 300ms ease-out;
+}
+
+.dark .image-dark-mode {
+  filter: brightness(0.95);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}

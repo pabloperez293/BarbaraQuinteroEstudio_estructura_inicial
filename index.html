@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Barbara Quintero Estudio — Lash Artist & Beauty Studio." />
+    <title>Barbara Quintero Estudio</title>
+
+    <script>
+  (function () {
+    const savedTheme = localStorage.getItem("bqe-theme");
+    const theme = savedTheme === "light" ? "light" : "dark";
+
+    document.documentElement.classList.add(theme);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
