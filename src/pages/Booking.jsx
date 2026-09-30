@@ -1,15 +1,11 @@
-import Navbar from "../components/layout/Navbar";
-import MobileNav from "../components/layout/MobileNav";
 import BookingWizard from "../components/booking/BookingWizard";
 
 export default function Booking() {
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <main className="mx-auto max-w-5xl px-4 py-10 pb-28 md:py-16">
+      <main className="mx-auto max-w-5xl px-4 py-12 pb-28 sm:px-6 md:py-20 md:pb-20">
         <BookingWizard />
       </main>
-      <MobileNav />
     </div>
   );
 }

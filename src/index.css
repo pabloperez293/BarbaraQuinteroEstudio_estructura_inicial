@@ -77,9 +77,9 @@ html.light {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
   background: var(--bg-main);
 }
-
 body {
   margin: 0;
   min-width: 320px;
